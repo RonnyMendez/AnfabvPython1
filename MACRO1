@@ -1,0 +1,18 @@
+Sub MultiplicarCeldas()
+    Dim Celda As Range
+    Dim Factor As Double
+    Dim TipoCambio As Double
+
+    ' Define los factores
+    Factor = 0.544806
+    TipoCambio = 3.78
+
+    ' Recorrer cada celda en la selección
+    For Each Celda In Selection
+        ' Verificar si la celda contiene un número
+        If IsNumeric(Celda.Value) Then
+            ' Multiplicar por el factor y por el tipo de cambio
+            Celda.Value = Celda.Value * Factor * TipoCambio
+        End If
+    Next Celda
+End Sub
